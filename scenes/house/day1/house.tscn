@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cguq232jj7b75"]
+
+[ext_resource type="PackedScene" uid="uid://ck78012a65lst" path="res://assets/house.blend" id="2_ueeth"]
+[ext_resource type="PackedScene" uid="uid://bayvs65mc7p6a" path="res://scenes/player/player.tscn" id="5_lrmdo"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lrmdo"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_tofca"]
+sky_material = SubResource("ProceduralSkyMaterial_lrmdo")
+
+[sub_resource type="Environment" id="Environment_4io2w"]
+background_mode = 2
+sky = SubResource("Sky_tofca")
+glow_enabled = true
+
+[node name="House" type="Node3D" unique_id=1806837822]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=75684541]
+environment = SubResource("Environment_4io2w")
+
+[node name="Player" parent="." unique_id=1093817366 instance=ExtResource("5_lrmdo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 5, 17)
+
+[node name="house" parent="." unique_id=56675658 instance=ExtResource("2_ueeth")]
