@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c53jxljflkx5u"]
+
+[ext_resource type="PackedScene" uid="uid://uegu77d4wdmi" path="res://assets/door.blend" id="1_bu3y2"]
+[ext_resource type="Script" uid="uid://b1rihuuas2i2l" path="res://scenes/door/door.gd" id="2_odsy8"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dg7xi"]
+height = 3.0
+radius = 2.0
+
+[node name="door" unique_id=1786826446 instance=ExtResource("1_bu3y2")]
+script = ExtResource("2_odsy8")
+
+[node name="Area3D" type="Area3D" parent="." index="4" unique_id=1075422049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=581439176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CylinderShape3D_dg7xi")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

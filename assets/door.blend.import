@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ck78012a65lst"
-path="res://.godot/imported/house.blend-e3a95aa2a61f1df401a4707de477a532.scn"
+uid="uid://uegu77d4wdmi"
+path="res://.godot/imported/door.blend-0a9d263d4e869bc7887ca6d3fd2453ad.scn"
 
 [deps]
 
-source_file="res://assets/house.blend"
-dest_files=["res://.godot/imported/house.blend-e3a95aa2a61f1df401a4707de477a532.scn"]
+source_file="res://assets/door.blend"
+dest_files=["res://.godot/imported/door.blend-0a9d263d4e869bc7887ca6d3fd2453ad.scn"]
 
 [params]
 
@@ -46,15 +46,15 @@ _subresources={
 "use_external/fallback_path": "res://assets/materials/carpet.tres",
 "use_external/path": "uid://dbfr4vhsw8vj6"
 },
-"Plaster": {
+"Metal": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/materials/plaster.tres",
-"use_external/path": "res://assets/materials/plaster.tres"
+"use_external/fallback_path": "res://assets/materials/metal.tres",
+"use_external/path": "uid://cye7a07se6fgc"
 },
-"Wallpaper": {
+"Wood": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/materials/wallpaper.tres",
-"use_external/path": "uid://dfuh3haiyiddi"
+"use_external/fallback_path": "res://assets/materials/door.tres",
+"use_external/path": "uid://f8y242m02kef"
 }
 }
 }

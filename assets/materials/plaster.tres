@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://8d5ndqpw0381"]
+
+[ext_resource type="Texture2D" uid="uid://chlrwc326bgm4" path="res://assets/textures/plaster/PaintedPlaster017_1K-JPG_Color.jpg" id="1_dxe7e"]
+[ext_resource type="Texture2D" uid="uid://ce6k5jogyut5n" path="res://assets/textures/plaster/PaintedPlaster017_1K-JPG_Displacement.jpg" id="2_ygvkg"]
+[ext_resource type="Texture2D" uid="uid://cig0stsx6hbyi" path="res://assets/textures/plaster/PaintedPlaster017_1K-JPG_NormalGL.jpg" id="3_2n75w"]
+[ext_resource type="Material" uid="uid://d38sbpqly276q" path="res://assets/materials/gunk.tres" id="3_ygvkg"]
+[ext_resource type="Texture2D" uid="uid://ddwcvo1bgxdjx" path="res://assets/textures/plaster/PaintedPlaster017_1K-JPG_Roughness.jpg" id="4_s1qxe"]
+
+[resource]
+next_pass = ExtResource("3_ygvkg")
+albedo_texture = ExtResource("1_dxe7e")
+roughness_texture = ExtResource("4_s1qxe")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("3_2n75w")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("2_ygvkg")

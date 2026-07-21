@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://f8y242m02kef"]
+
+[ext_resource type="Texture2D" uid="uid://b5q68tr62nl6t" path="res://assets/textures/wallpaper/Wallpaper001A_1K-JPG_Color.jpg" id="1_r047v"]
+[ext_resource type="Texture2D" uid="uid://o3j5af7ckmxa" path="res://assets/textures/wallpaper/Wallpaper001A_1K-JPG_Displacement.jpg" id="2_3u4fd"]
+[ext_resource type="Material" uid="uid://d38sbpqly276q" path="res://assets/materials/gunk.tres" id="3_3u4fd"]
+[ext_resource type="Texture2D" uid="uid://dlnd52u1dxc41" path="res://assets/textures/wallpaper/Wallpaper001A_1K-JPG_NormalGL.jpg" id="3_y5twg"]
+[ext_resource type="Texture2D" uid="uid://b6qfjfnns013m" path="res://assets/textures/wallpaper/Wallpaper001A_1K-JPG_Roughness.jpg" id="4_dinuc"]
+
+[resource]
+next_pass = ExtResource("3_3u4fd")
+albedo_color = Color(1, 0.9764706, 0.94509804, 1)
+albedo_texture = ExtResource("1_r047v")
+roughness_texture = ExtResource("4_dinuc")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("3_y5twg")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("2_3u4fd")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
