@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://do0iddkhcpel6"]
+
+[ext_resource type="Texture2D" uid="uid://cae6s0l87ulb3" path="res://assets/textures/bed_pillow/bed_pillow_material_Base_Color.png" id="1_d6gm2"]
+[ext_resource type="Texture2D" uid="uid://bgd4vs166elp7" path="res://assets/textures/bed_pillow/bed_pillow_material_Mixed_AO.png" id="2_hxjkp"]
+[ext_resource type="Texture2D" uid="uid://bwibjfjs0i5r2" path="res://assets/textures/bed_pillow/bed_pillow_material_Metallic.png" id="3_i6q7o"]
+[ext_resource type="Material" uid="uid://d38sbpqly276q" path="res://assets/materials/gunk.tres" id="4_hxjkp"]
+[ext_resource type="Texture2D" uid="uid://uk4hakcfskxi" path="res://assets/textures/bed_pillow/bed_pillow_material_Normal_DirectX.png" id="4_yc7gt"]
+[ext_resource type="Texture2D" uid="uid://coglwtnbigbi" path="res://assets/textures/bed_pillow/bed_pillow_material_Roughness.png" id="5_2f7rj"]
+
+[resource]
+next_pass = ExtResource("4_hxjkp")
+albedo_texture = ExtResource("1_d6gm2")
+metallic = 1.0
+metallic_texture = ExtResource("3_i6q7o")
+roughness_texture = ExtResource("5_2f7rj")
+normal_enabled = true
+normal_texture = ExtResource("4_yc7gt")
+ao_enabled = true
+ao_texture = ExtResource("2_hxjkp")

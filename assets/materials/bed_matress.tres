@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://igqgb7pl6br5"]
+
+[ext_resource type="Texture2D" uid="uid://c5okp81jjiv8i" path="res://assets/textures/bed_matress/bed_mattres_material_Base_Color.png" id="1_olqtv"]
+[ext_resource type="Texture2D" uid="uid://cbntp702owx28" path="res://assets/textures/bed_matress/bed_mattres_material_Mixed_AO.png" id="2_lbjng"]
+[ext_resource type="Texture2D" uid="uid://jpbxjmpeuurf" path="res://assets/textures/bed_matress/bed_mattres_material_Metallic.png" id="3_0ns5j"]
+[ext_resource type="Texture2D" uid="uid://dyteogd4vpcvv" path="res://assets/textures/bed_matress/bed_mattres_material_Normal_DirectX.png" id="4_epxai"]
+[ext_resource type="Material" uid="uid://d38sbpqly276q" path="res://assets/materials/gunk.tres" id="4_lbjng"]
+[ext_resource type="Texture2D" uid="uid://4mkv8pkcibjn" path="res://assets/textures/bed_matress/bed_mattres_material_Roughness.png" id="5_w5s35"]
+
+[resource]
+next_pass = ExtResource("4_lbjng")
+albedo_texture = ExtResource("1_olqtv")
+metallic = 1.0
+metallic_texture = ExtResource("3_0ns5j")
+roughness_texture = ExtResource("5_w5s35")
+normal_enabled = true
+normal_texture = ExtResource("4_epxai")
+ao_enabled = true
+ao_texture = ExtResource("2_lbjng")

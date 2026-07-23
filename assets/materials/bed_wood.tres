@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cpevr61ja6ji8"]
+
+[ext_resource type="Texture2D" uid="uid://pknjqtrtler4" path="res://assets/textures/bed_wood/bed_wood_material_Base_Color.png" id="1_vjr17"]
+[ext_resource type="Texture2D" uid="uid://cckqytnse12mo" path="res://assets/textures/bed_wood/bed_wood_material_Mixed_AO.png" id="2_iiq6v"]
+[ext_resource type="Texture2D" uid="uid://dl35yovtfrda8" path="res://assets/textures/bed_wood/bed_wood_material_Metallic.png" id="3_gupgb"]
+[ext_resource type="Texture2D" uid="uid://df7psnk1fd2ba" path="res://assets/textures/bed_wood/bed_wood_material_Normal_DirectX.png" id="4_0me57"]
+[ext_resource type="Texture2D" uid="uid://cinxoh4i60t08" path="res://assets/textures/bed_wood/bed_wood_material_Roughness.png" id="5_ljbme"]
+
+[resource]
+albedo_texture = ExtResource("1_vjr17")
+metallic = 1.0
+metallic_texture = ExtResource("3_gupgb")
+roughness_texture = ExtResource("5_ljbme")
+normal_enabled = true
+normal_texture = ExtResource("4_0me57")
+ao_enabled = true
+ao_texture = ExtResource("2_iiq6v")

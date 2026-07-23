@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b7qieox5ybfyf"]
+
+[ext_resource type="PackedScene" uid="uid://gwbjoj2jk61j" path="res://assets/models/light.blend" id="1_mx82u"]
+[ext_resource type="Script" uid="uid://bnojimpymqoa1" path="res://scenes/lights/light.gd" id="2_rhy3g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rhy3g"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[node name="light" unique_id=546139774 instance=ExtResource("1_mx82u")]
+script = ExtResource("2_rhy3g")
+lit = null
+
+[node name="Light" parent="." index="0" unique_id=1859821035]
+surface_material_override/1 = SubResource("StandardMaterial3D_rhy3g")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=1157495634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12310858, 0)
+light_energy = 0.2
+light_indirect_energy = 0.5
+shadow_enabled = true
+omni_range = 10.0

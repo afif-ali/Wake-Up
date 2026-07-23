@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbfevqgeuo8n4"]
+
+[ext_resource type="Texture2D" uid="uid://bnqnix0t63gdn" path="res://assets/textures/computer/01___Default_baseColor.jpeg" id="1_okdpi"]
+[ext_resource type="Texture2D" uid="uid://sc7bm2uu1hu2" path="res://assets/textures/computer/01___Default_emissive.jpeg" id="2_f70jp"]
+[ext_resource type="Texture2D" uid="uid://t0yv8pqbycyv" path="res://assets/textures/computer/01___Default_normal.png" id="4_lsnx8"]
+
+[resource]
+albedo_texture = ExtResource("1_okdpi")
+metallic = 1.0
+emission_enabled = true
+emission_texture = ExtResource("2_f70jp")
+normal_enabled = true
+normal_texture = ExtResource("4_lsnx8")

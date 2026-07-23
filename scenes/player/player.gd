@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED:int = 4
+const SPEED:int = 3
 const ACCELERATION:int = 20
 const DECELERATION:int = 10
 const GRAVITY:int = 30
@@ -19,6 +19,8 @@ const BOB_SETTLE_SPEED:float = 10.0
 
 @onready var camera = $Camera3D
 @onready var camera_pos = $CameraPos
+
+@export var controlling = false
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -50,7 +52,7 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var movement_vector:Vector2
-	
+
 	if direction:
 		movement_vector.x = lerp(velocity.x, direction.x * SPEED, ACCELERATION * delta)
 		movement_vector.y = lerp(velocity.z, direction.z * SPEED, ACCELERATION * delta)
@@ -65,9 +67,25 @@ func _physics_process(delta: float) -> void:
 		camera.position = lerp(camera.position, camera_pos.position, BOB_SETTLE_SPEED * delta)
 		camera.rotation.z = lerp_angle(camera.rotation.z, 0.0, BOB_SETTLE_SPEED * delta)
 		bob_time = 0.0
-	
+
 	velocity.x = movement_vector.x
 	velocity.z = movement_vector.y
-	
+
 	bob_time += delta
 	move_and_slide()
+
+
+func take_control():
+	camera.current = true
+	
+	set_process(true)
+	set_physics_process(true)
+	set_process_unhandled_input(true)
+	
+	target_camera_rotation.y = rotation.y
+	target_camera_rotation.x = camera.rotation.x
+
+func lose_control():
+	set_process(false)
+	set_physics_process(false)
+	set_process_unhandled_input(false)

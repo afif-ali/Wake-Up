@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cq3t6fk7k7qg5"]
+
+[ext_resource type="Script" uid="uid://5t8tmejnxoxn" path="res://scenes/dialogue/dialogue.gd" id="1_cpw6a"]
+
+[node name="Dialogue" type="Control" unique_id=1341159570]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_cpw6a")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=723136614]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="Text" type="Label" parent="MarginContainer" unique_id=1177871922]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="." unique_id=1934849963]
+one_shot = true

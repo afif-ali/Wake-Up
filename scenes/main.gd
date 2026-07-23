@@ -1,7 +1,7 @@
 extends Node
 
 
-const house:PackedScene = preload("res://scenes/house/day1/house.tscn")
+const day1:PackedScene = preload("res://scenes/house/day1/day1.tscn")
 
 func _ready() -> void:
-	add_child(house.instantiate())
+	add_child(day1.instantiate())

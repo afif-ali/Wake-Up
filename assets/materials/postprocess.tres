@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://lo4nadmgnu7c"]
+
+[ext_resource type="Shader" uid="uid://b73elci2ouowr" path="res://shaders/postprocess.gdshader" id="1_qopsv"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qopsv")
+shader_parameter/pixel_size = 4.0
+shader_parameter/r_displacement = Vector2(1, 0)
+shader_parameter/g_displacement = Vector2(0, 2)
+shader_parameter/b_displacement = Vector2(-1, 0)
+shader_parameter/alpha = 1.0
+shader_parameter/inner_radius = -10.0
+shader_parameter/outer_radius = 1.0

@@ -13,9 +13,9 @@ seamless = true
 invert = true
 
 [resource]
-render_priority = 0
+render_priority = 99
 shader = ExtResource("1_dfpfx")
 shader_parameter/color = Color(0.26666668, 0.27058825, 0, 1)
 shader_parameter/scale = 0.05
-shader_parameter/transparency = 0.2
+shader_parameter/transparency = 0.3
 shader_parameter/noise = SubResource("NoiseTexture2D_ujr4n")

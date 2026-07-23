@@ -1,0 +1,27 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://6w55hjstn1j5"]
+
+[ext_resource type="Texture2D" uid="uid://c5yc1k7jyxwb8" path="res://assets/textures/concrete/Concrete044D_1K-JPG_Color.jpg" id="1_js2ku"]
+[ext_resource type="Texture2D" uid="uid://b3wxgswlkj73p" path="res://assets/textures/concrete/Concrete044D_1K-JPG_AmbientOcclusion.jpg" id="2_cqhk2"]
+[ext_resource type="Texture2D" uid="uid://clp0yd8y0wbsv" path="res://assets/textures/concrete/Concrete044D_1K-JPG_Displacement.jpg" id="3_iskjp"]
+[ext_resource type="Texture2D" uid="uid://cg7k7lrag0gic" path="res://assets/textures/concrete/Concrete044D_1K-JPG_Metalness.jpg" id="4_fbrtm"]
+[ext_resource type="Material" uid="uid://d38sbpqly276q" path="res://assets/materials/gunk.tres" id="5_mwy03"]
+[ext_resource type="Texture2D" uid="uid://grx22q5tjbvr" path="res://assets/textures/concrete/Concrete044D_1K-JPG_NormalGL.jpg" id="6_38ab7"]
+[ext_resource type="Texture2D" uid="uid://cuq3mu0er74rk" path="res://assets/textures/concrete/Concrete044D_1K-JPG_Roughness.jpg" id="7_qspfi"]
+
+[resource]
+next_pass = ExtResource("5_mwy03")
+albedo_texture = ExtResource("1_js2ku")
+metallic = 1.0
+metallic_texture = ExtResource("4_fbrtm")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("7_qspfi")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("6_38ab7")
+ao_enabled = true
+ao_texture = ExtResource("2_cqhk2")
+ao_texture_channel = 4
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("3_iskjp")
+uv1_scale = Vector3(0.3, 0.3, 0.3)

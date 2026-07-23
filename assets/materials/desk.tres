@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bo88upx4rc142"]
+
+[ext_resource type="Texture2D" uid="uid://dv1hd2tnmae04" path="res://assets/textures/desk/WoodenTable_M_WoodenTable_BaseColor.jpeg" id="1_6v7hw"]
+[ext_resource type="Texture2D" uid="uid://bhxv4krnqtwtn" path="res://assets/textures/desk/WoodenTable_M_WoodenTable_Metallic.jpeg" id="2_fw4pl"]
+[ext_resource type="Texture2D" uid="uid://b2huiryqa60no" path="res://assets/textures/desk/WoodenTable_M_WoodenTable_Normal.jpeg" id="3_qc4bv"]
+[ext_resource type="Texture2D" uid="uid://bscec5w8nx2oe" path="res://assets/textures/desk/WoodenTable_M_WoodenTable_Roughness.jpeg" id="4_oynhl"]
+
+[resource]
+albedo_texture = ExtResource("1_6v7hw")
+metallic = 1.0
+metallic_texture = ExtResource("2_fw4pl")
+roughness_texture = ExtResource("4_oynhl")
+normal_enabled = true
+normal_texture = ExtResource("3_qc4bv")

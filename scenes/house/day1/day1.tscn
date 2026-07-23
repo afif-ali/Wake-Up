@@ -1,0 +1,235 @@
+[gd_scene format=3 uid="uid://cguq232jj7b75"]
+
+[ext_resource type="Script" uid="uid://dpgq7nvv3awmu" path="res://scenes/house/day1/day_1.gd" id="1_kxtp2"]
+[ext_resource type="Material" uid="uid://lo4nadmgnu7c" path="res://assets/materials/postprocess.tres" id="2_5o6qy"]
+[ext_resource type="PackedScene" uid="uid://ck78012a65lst" path="res://assets/models/house.blend" id="3_2uplj"]
+[ext_resource type="PackedScene" uid="uid://c53jxljflkx5u" path="res://scenes/door/door.tscn" id="4_7wlbh"]
+[ext_resource type="PackedScene" uid="uid://b7qieox5ybfyf" path="res://scenes/lights/light.tscn" id="5_rene2"]
+[ext_resource type="PackedScene" uid="uid://occxuf7jd7bc" path="res://assets/models/bed.blend" id="6_eubtq"]
+[ext_resource type="PackedScene" uid="uid://dy6agawhbxsv" path="res://assets/models/desk.blend" id="7_48647"]
+[ext_resource type="PackedScene" uid="uid://bayvs65mc7p6a" path="res://scenes/player/player.tscn" id="8_5o6qy"]
+[ext_resource type="PackedScene" uid="uid://cq3t6fk7k7qg5" path="res://scenes/dialogue/dialogue.tscn" id="9_2uplj"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_oeocw"]
+material = ExtResource("2_5o6qy")
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="Environment" id="Environment_4io2w"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.01
+ssao_enabled = true
+ssao_intensity = 0.5
+glow_enabled = true
+
+[sub_resource type="Animation" id="Animation_kxtp2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Postprocess:mesh:material:shader_parameter/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Postprocess:mesh:material:shader_parameter/inner_radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-10.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-6, 5.5849633, 15)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.43633232, 3.1415927, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Camera3D:current")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5o6qy"]
+resource_name = "StartCutscene"
+length = 5.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Postprocess:mesh:material:shader_parameter/alpha")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Postprocess:mesh:material:shader_parameter/inner_radius")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-10.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-6, 5.5849633, 15), Vector3(-6, 5.5849633, 15), Vector3(-8, 6, 16)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D:rotation")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.43633232, 3.1415927, 0), Vector3(0.43633232, 3.1415927, 0), Vector3(0, 1.5707964, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Camera3D:current")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2uplj"]
+_data = {
+&"RESET": SubResource("Animation_kxtp2"),
+&"StartCutscene": SubResource("Animation_5o6qy")
+}
+
+[node name="Day1" type="Node3D" unique_id=1806837822]
+script = ExtResource("1_kxtp2")
+
+[node name="Postprocess" type="MeshInstance3D" parent="." unique_id=1829385525]
+transform = Transform3D(-0.98791635, -0.15251224, -0.027592147, -0.1256492, 0.8923397, -0.43352294, 0.09073912, -0.42481747, -0.90072, -6, 5.5849633, 15)
+visible = false
+extra_cull_margin = 100.0
+mesh = SubResource("QuadMesh_oeocw")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=75684541]
+environment = SubResource("Environment_4io2w")
+
+[node name="House" parent="." unique_id=56675658 instance=ExtResource("3_2uplj")]
+
+[node name="Doors" type="Node3D" parent="." unique_id=1934365505]
+
+[node name="BedroomDoor" parent="Doors" unique_id=1786826446 instance=ExtResource("4_7wlbh")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -13.5, 4.5, 21)
+
+[node name="GarageDoor" parent="Doors" unique_id=382344102 instance=ExtResource("4_7wlbh")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -20.5, 0, 21)
+
+[node name="BathroomDoor" parent="Doors" unique_id=1385803568 instance=ExtResource("4_7wlbh")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -13.5, 4.5, 10)
+opened = true
+
+[node name="GarageHallwayDoor" parent="Doors" unique_id=1444963848 instance=ExtResource("4_7wlbh")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, 0, 18)
+
+[node name="Lights" type="Node3D" parent="." unique_id=1655193130]
+
+[node name="BedroomLight" parent="Lights" unique_id=546139774 instance=ExtResource("5_rene2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8.5, 18.5)
+lit = true
+color = Color(0.99999994, 0.8767258, 0.7994711, 1)
+
+[node name="BathroomLight" parent="Lights" unique_id=686252536 instance=ExtResource("5_rene2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8.5, 9.5)
+lit = true
+color = Color(0.9070238, 0.95108694, 0.97910446, 1)
+
+[node name="HallwayLight1" parent="Lights" unique_id=1671989779 instance=ExtResource("5_rene2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.75, 8.5, 19.5)
+lit = true
+
+[node name="HallwayLight2" parent="Lights" unique_id=1866442648 instance=ExtResource("5_rene2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.75, 8.5, 2.5)
+lit = true
+
+[node name="HallwayLight3" parent="Lights" unique_id=1464777196 instance=ExtResource("5_rene2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 8.5, 2.5)
+lit = true
+
+[node name="GarageLight" parent="Lights" unique_id=92500170 instance=ExtResource("5_rene2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, 4, 19.5)
+lit = true
+
+[node name="bed" parent="." unique_id=150500141 instance=ExtResource("6_eubtq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4.5, 15.8)
+
+[node name="desk" parent="." unique_id=1984837906 instance=ExtResource("7_48647")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 4, 23)
+
+[node name="StartCutscene" type="Node" parent="." unique_id=523004490]
+
+[node name="Camera3D" type="Camera3D" parent="StartCutscene" unique_id=1482791893]
+transform = Transform3D(-1, -3.694646e-08, -7.923193e-08, 0, 0.9063077, -0.42261824, 8.742278e-08, -0.42261824, -0.9063077, -6, 5.5849633, 15)
+
+[node name="StartCutsceneAnim" type="AnimationPlayer" parent="StartCutscene" unique_id=1966899257]
+libraries/ = SubResource("AnimationLibrary_2uplj")
+
+[node name="Player" parent="." unique_id=1093817366 instance=ExtResource("8_5o6qy")]
+
+[node name="Dialogue" parent="." unique_id=1341159570 instance=ExtResource("9_2uplj")]
