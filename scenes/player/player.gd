@@ -20,7 +20,7 @@ const BOB_SETTLE_SPEED:float = 10.0
 @onready var camera = $Camera3D
 @onready var camera_pos = $CameraPos
 
-@export var controlling = false
+var controlling = false
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

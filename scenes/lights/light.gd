@@ -21,7 +21,7 @@ func _ready() -> void:
 
 func _set_lit():
 	if lit:
-		$OmniLight3D.light_energy = 0.2
+		$OmniLight3D.light_energy = 0.5
 		material.emission_enabled = true
 	else:
 		$OmniLight3D.light_energy = 0.0

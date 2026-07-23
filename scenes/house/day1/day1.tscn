@@ -87,6 +87,30 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Player:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Player:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_5o6qy"]
 resource_name = "StartCutscene"
@@ -152,11 +176,230 @@ tracks/4/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"lose_control"
+}, {
+"args": [],
+"method": &"take_control"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Player:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-8, 4.5, 16)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Player:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 1.5707964, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2uplj"]
 _data = {
 &"RESET": SubResource("Animation_kxtp2"),
 &"StartCutscene": SubResource("Animation_5o6qy")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t8t15"]
+size = Vector3(2, 3.8120117, 3)
+
+[sub_resource type="Animation" id="Animation_2uplj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Postprocess:mesh:material:shader_parameter/inner_radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-10.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Postprocess:mesh:material:shader_parameter/alpha")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D:current")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7, 4.5, 12)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Player:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Camera3D:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.17453292, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7wlbh"]
+resource_name = "showering"
+length = 6.0
+step = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Player")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"lose_control"
+}, {
+"args": [],
+"method": &"take_control"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Postprocess:mesh:material:shader_parameter/inner_radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 5, 5.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -10.0, -5.0, -5.0, -10.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Postprocess:mesh:material:shader_parameter/alpha")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 5, 5.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.5, 1.0, 1.0, 1.0, 1.0, 0.5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D:current")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Player:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(5.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(-7, 4.5, 12)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Player:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(5.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector3(0, 1.5707964, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Camera3D:rotation")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5, 1, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.17453292, 0, 0), Vector3(0.17453292, 0.034906585, 0.034906585), Vector3(0.17453292, -0.034906585, 0), Vector3(0.17453292, 0.034906585, -0.034906585), Vector3(0.17453292, -0.034906585, 0), Vector3(0.17453292, 0.034906585, 0.034906585), Vector3(0.17453292, -0.034906585, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rene2"]
+_data = {
+&"RESET": SubResource("Animation_2uplj"),
+&"showering": SubResource("Animation_7wlbh")
 }
 
 [node name="Day1" type="Node3D" unique_id=1806837822]
@@ -172,6 +415,14 @@ mesh = SubResource("QuadMesh_oeocw")
 environment = SubResource("Environment_4io2w")
 
 [node name="House" parent="." unique_id=56675658 instance=ExtResource("3_2uplj")]
+
+[node name="Props" type="Node3D" parent="." unique_id=670789858]
+
+[node name="Bed" parent="Props" unique_id=150500141 instance=ExtResource("6_eubtq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4.5, 15.8)
+
+[node name="Desk" parent="Props" unique_id=1984837906 instance=ExtResource("7_48647")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 4, 23)
 
 [node name="Doors" type="Node3D" parent="." unique_id=1934365505]
 
@@ -198,29 +449,27 @@ color = Color(0.99999994, 0.8767258, 0.7994711, 1)
 [node name="BathroomLight" parent="Lights" unique_id=686252536 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8.5, 9.5)
 lit = true
-color = Color(0.9070238, 0.95108694, 0.97910446, 1)
+color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="HallwayLight1" parent="Lights" unique_id=1671989779 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.75, 8.5, 19.5)
 lit = true
+color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="HallwayLight2" parent="Lights" unique_id=1866442648 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.75, 8.5, 2.5)
 lit = true
+color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="HallwayLight3" parent="Lights" unique_id=1464777196 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 8.5, 2.5)
 lit = true
+color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="GarageLight" parent="Lights" unique_id=92500170 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, 4, 19.5)
 lit = true
-
-[node name="bed" parent="." unique_id=150500141 instance=ExtResource("6_eubtq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4.5, 15.8)
-
-[node name="desk" parent="." unique_id=1984837906 instance=ExtResource("7_48647")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 4, 23)
+color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="StartCutscene" type="Node" parent="." unique_id=523004490]
 
@@ -230,6 +479,25 @@ transform = Transform3D(-1, -3.694646e-08, -7.923193e-08, 0, 0.9063077, -0.42261
 [node name="StartCutsceneAnim" type="AnimationPlayer" parent="StartCutscene" unique_id=1966899257]
 libraries/ = SubResource("AnimationLibrary_2uplj")
 
+[node name="ShowerState" type="Node" parent="." unique_id=2035455960]
+
+[node name="Camera3D" type="Camera3D" parent="ShowerState" unique_id=973746157]
+transform = Transform3D(1, 0, 0, 0, 0.98480767, -0.17364816, 0, 0.17364816, 0.98480767, -4.5, 6.2, 10)
+
+[node name="ShowerStateTrigger" type="Area3D" parent="ShowerState" unique_id=1930893713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4.5, 12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShowerState/ShowerStateTrigger" unique_id=1982729855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.0310059, -0.5303955)
+shape = SubResource("BoxShape3D_t8t15")
+
+[node name="ShowerStateAnim" type="AnimationPlayer" parent="ShowerState" unique_id=230348703]
+libraries/ = SubResource("AnimationLibrary_rene2")
+
 [node name="Player" parent="." unique_id=1093817366 instance=ExtResource("8_5o6qy")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 4.5, 12)
 
 [node name="Dialogue" parent="." unique_id=1341159570 instance=ExtResource("9_2uplj")]
+
+[connection signal="body_entered" from="ShowerState/ShowerStateTrigger" to="." method="_on_shower_state_trigger_body_entered"]
+[connection signal="body_exited" from="ShowerState/ShowerStateTrigger" to="." method="_on_shower_state_trigger_body_exited"]

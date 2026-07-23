@@ -49,12 +49,22 @@ _subresources={
 "Concrete": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://assets/materials/concrete.tres",
-"use_external/path": "res://assets/materials/concrete.tres"
+"use_external/path": "uid://6w55hjstn1j5"
+},
+"Glass": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/glass.tres",
+"use_external/path": "uid://bi6naom72ffjb"
 },
 "Plaster": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://assets/materials/plaster.tres",
 "use_external/path": "uid://8d5ndqpw0381"
+},
+"Tiles": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/tiles.tres",
+"use_external/path": "res://assets/materials/tiles.tres"
 },
 "Wallpaper": {
 "use_external/enabled": true,

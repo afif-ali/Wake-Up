@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bi6naom72ffjb"]
+
+[resource]
+transparency = 1
+cull_mode = 2
+depth_draw_mode = 1
+albedo_color = Color(1.4090278e-05, 0.018831216, 0.14318159, 0.11372549)
+refraction_scale = 0.0
+uv1_scale = Vector3(2, 2, 2)

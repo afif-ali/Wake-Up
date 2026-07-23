@@ -16,7 +16,7 @@ surface_material_override/1 = SubResource("StandardMaterial3D_rhy3g")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=1157495634]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12310858, 0)
-light_energy = 0.2
+light_energy = 0.5
 light_indirect_energy = 0.5
 shadow_enabled = true
 omni_range = 10.0
