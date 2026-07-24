@@ -471,6 +471,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, 4, 19.5)
 lit = true
 color = Color(1, 0.8784314, 0.8, 1)
 
+[node name="KitchenLight" parent="Lights" unique_id=1548822467 instance=ExtResource("5_rene2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 4, 2.5)
+lit = true
+color = Color(1, 0.8784314, 0.8, 1)
+
 [node name="StartCutscene" type="Node" parent="." unique_id=523004490]
 
 [node name="Camera3D" type="Camera3D" parent="StartCutscene" unique_id=1482791893]

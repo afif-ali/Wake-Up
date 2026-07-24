@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bj66ac7oewsus"]
+
+[ext_resource type="Texture2D" uid="uid://c422gdycpb2wq" path="res://assets/textures/counter_wood/CB_low_woodbase_BaseColor.png" id="1_xsi0i"]
+[ext_resource type="Texture2D" uid="uid://llqdrn3rrxfq" path="res://assets/textures/counter_wood/CB_low_woodbase_Metallic.png" id="2_n5mt8"]
+[ext_resource type="Texture2D" uid="uid://b2o83k5ghe84" path="res://assets/textures/counter_wood/CB_low_woodbase_Normal.png" id="3_3u3ic"]
+[ext_resource type="Texture2D" uid="uid://bb3gdu8de5jf" path="res://assets/textures/counter_wood/CB_low_woodbase_Roughness.png" id="4_yg1g5"]
+
+[resource]
+albedo_texture = ExtResource("1_xsi0i")
+metallic = 1.0
+metallic_texture = ExtResource("2_n5mt8")
+roughness_texture = ExtResource("4_yg1g5")
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("3_3u3ic")

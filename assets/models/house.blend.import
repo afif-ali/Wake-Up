@@ -51,10 +51,25 @@ _subresources={
 "use_external/fallback_path": "res://assets/materials/concrete.tres",
 "use_external/path": "uid://6w55hjstn1j5"
 },
-"Glass": {
+"CounterTop": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://assets/materials/glass.tres",
-"use_external/path": "uid://bi6naom72ffjb"
+"use_external/fallback_path": "res://assets/materials/counter_top.tres",
+"use_external/path": "uid://chqpmbieiu870"
+},
+"CounterWood": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/counter_wood.tres",
+"use_external/path": "uid://bj66ac7oewsus"
+},
+"Fridge": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/fridge.tres",
+"use_external/path": "uid://c60hp1y81fmbq"
+},
+"Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/metal.tres",
+"use_external/path": "uid://cye7a07se6fgc"
 },
 "Plaster": {
 "use_external/enabled": true,
@@ -64,7 +79,7 @@ _subresources={
 "Tiles": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://assets/materials/tiles.tres",
-"use_external/path": "res://assets/materials/tiles.tres"
+"use_external/path": "uid://cof12y01iyxtu"
 },
 "Wallpaper": {
 "use_external/enabled": true,

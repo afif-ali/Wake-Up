@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode unshaded, fog_disabled, depth_draw_never;
+render_mode unshaded, fog_disabled, depth_draw_never, blend_mix;
 
 uniform sampler2D screen_tex:hint_screen_texture, repeat_disable;
 uniform float pixel_size:hint_range(0.0, 20.0, 1.0);
