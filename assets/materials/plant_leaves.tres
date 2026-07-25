@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cb6t21s4t7kxn"]
+
+[ext_resource type="Texture2D" uid="uid://dc5rm7sq1cceb" path="res://assets/textures/plant_leaves/PILEA_PEPEROMIOIDES_DIFFUSE.jpg" id="1_xg3k2"]
+[ext_resource type="Texture2D" uid="uid://bfk45lo73w0rk" path="res://assets/textures/plant_leaves/PILEA_PEPEROMIOIDES_NORMAL.jpg" id="2_c3bvt"]
+[ext_resource type="Texture2D" uid="uid://1go8vsqa746m" path="res://assets/textures/plant_leaves/PILEA_PEPEROMIOIDES_ROUGHNESS.jpg" id="3_xp4g2"]
+
+[resource]
+albedo_texture = ExtResource("1_xg3k2")
+roughness_texture = ExtResource("3_xp4g2")
+normal_enabled = true
+normal_texture = ExtResource("2_c3bvt")

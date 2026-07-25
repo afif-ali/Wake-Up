@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ce8ifu13qotj0"]
+
+[ext_resource type="Texture2D" uid="uid://baqlo0gma3o46" path="res://assets/textures/watering_can/watering_can_Base_color.jpg" id="1_7h2wp"]
+[ext_resource type="Texture2D" uid="uid://bhkplcumy3iei" path="res://assets/textures/watering_can/watering_can_Mixed_AO.jpg" id="2_olq5c"]
+[ext_resource type="Texture2D" uid="uid://b8dqvubipoeob" path="res://assets/textures/watering_can/watering_can_Metallic.jpg" id="3_38blf"]
+[ext_resource type="Texture2D" uid="uid://x0ebhfly73bk" path="res://assets/textures/watering_can/watering_can_Normal_OpenGL.jpg" id="4_m8h8j"]
+[ext_resource type="Texture2D" uid="uid://djui6qnu83eb5" path="res://assets/textures/watering_can/watering_can_Roughness.jpg" id="5_y0o6t"]
+
+[resource]
+albedo_texture = ExtResource("1_7h2wp")
+metallic = 1.0
+metallic_texture = ExtResource("3_38blf")
+roughness_texture = ExtResource("5_y0o6t")
+normal_enabled = true
+normal_texture = ExtResource("4_m8h8j")
+ao_enabled = true
+ao_texture = ExtResource("2_olq5c")

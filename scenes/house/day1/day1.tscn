@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dy6agawhbxsv" path="res://assets/models/desk.blend" id="7_48647"]
 [ext_resource type="PackedScene" uid="uid://bayvs65mc7p6a" path="res://scenes/player/player.tscn" id="8_5o6qy"]
 [ext_resource type="PackedScene" uid="uid://cq3t6fk7k7qg5" path="res://scenes/ui/UI.tscn" id="9_2uplj"]
+[ext_resource type="PackedScene" uid="uid://ditygejp8kl48" path="res://assets/models/plant.blend" id="11_rene2"]
+[ext_resource type="PackedScene" uid="uid://bih2mjo2t75vj" path="res://assets/models/watering_can.blend" id="12_eubtq"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_oeocw"]
 material = ExtResource("2_5o6qy")
@@ -25,6 +27,8 @@ ambient_light_energy = 0.01
 ssao_enabled = true
 ssao_intensity = 0.5
 glow_enabled = true
+glow_intensity = 0.5
+glow_strength = 2.0
 
 [sub_resource type="Animation" id="Animation_kxtp2"]
 length = 0.001
@@ -410,6 +414,17 @@ size = Vector3(4, 4, 2)
 height = 3.0
 radius = 1.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ya1bm"]
+size = Vector3(3, 4, 10)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ya1bm"]
+height = 2.5
+radius = 1.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_t8t15"]
+height = 3.5
+radius = 2.0
+
 [node name="Day1" type="Node3D" unique_id=1806837822]
 script = ExtResource("1_kxtp2")
 
@@ -426,6 +441,9 @@ environment = SubResource("Environment_4io2w")
 
 [node name="Props" type="Node3D" parent="." unique_id=670789858]
 
+[node name="Plant" parent="Props" unique_id=1366338911 instance=ExtResource("11_rene2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 9.5)
+
 [node name="Bed" parent="Props" unique_id=150500141 instance=ExtResource("6_eubtq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4.5, 15.8)
 
@@ -434,6 +452,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 
 
 [node name="Breakfast" parent="Props" unique_id=1772270017 instance=ExtResource("6_7wlbh")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8, 1.1717921, -0.20098191)
+
+[node name="WateringCan" parent="Props" unique_id=1278772521 instance=ExtResource("12_eubtq")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -31, 0, 16)
 
 [node name="Doors" type="Node3D" parent="." unique_id=1934365505]
 
@@ -454,11 +475,15 @@ UI = NodePath("../../UI")
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, 0, 18)
 UI = NodePath("../../UI")
 
+[node name="GardenDoor" parent="Doors" unique_id=1682627028 node_paths=PackedStringArray("UI") instance=ExtResource("4_7wlbh")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -20.5, 0, 12)
+UI = NodePath("../../UI")
+
 [node name="Lights" type="Node3D" parent="." unique_id=1655193130]
 
 [node name="BedroomLight" parent="Lights" unique_id=546139774 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8.5, 18.5)
-color = Color(0.99999994, 0.8767258, 0.7994711, 1)
+color = Color(1, 0.78366625, 0.6406783, 1)
 
 [node name="BathroomLight" parent="Lights" unique_id=686252536 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8.5, 9.5)
@@ -479,6 +504,14 @@ color = Color(1, 0.8784314, 0.8, 1)
 [node name="GarageLight" parent="Lights" unique_id=92500170 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, 4, 19.5)
 color = Color(1, 0.8784314, 0.8, 1)
+
+[node name="GarageLight2" parent="Lights" unique_id=937700913 instance=ExtResource("5_rene2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 4, 21)
+color = Color(1, 0.8784314, 0.8, 1)
+
+[node name="GardenLight" parent="Lights" unique_id=603242628 instance=ExtResource("5_rene2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5, 4, 9.5)
+color = Color(1, 0.9050628, 0.98385984, 1)
 
 [node name="KitchenLight" parent="Lights" unique_id=1548822467 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 4, 2.5)
@@ -521,6 +554,26 @@ shape = SubResource("BoxShape3D_dg7xi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.5, 0)
 shape = SubResource("CylinderShape3D_dg7xi")
 
+[node name="WaterPlant" type="Node" parent="." unique_id=769556148]
+
+[node name="WaterPlantTaskZone" type="Area3D" parent="WaterPlant" unique_id=2116829840]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WaterPlant/WaterPlantTaskZone" unique_id=526335696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 1.5, 9.5)
+shape = SubResource("BoxShape3D_ya1bm")
+
+[node name="WateringCanPickupZone" type="Area3D" parent="WaterPlant" unique_id=1073481275]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WaterPlant/WateringCanPickupZone" unique_id=1408879998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, 1.25, 16)
+shape = SubResource("CylinderShape3D_ya1bm")
+
+[node name="WaterPlantZone" type="Area3D" parent="WaterPlant" unique_id=1735108544]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WaterPlant/WaterPlantZone" unique_id=445739993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0.75, 9.5)
+shape = SubResource("CylinderShape3D_t8t15")
+
 [node name="Player" parent="." unique_id=1093817366 instance=ExtResource("8_5o6qy")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 4.5, 12)
 
@@ -532,3 +585,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 
 [connection signal="body_exited" from="BreakfastState/BreakfastTaskZone" to="." method="_on_breakfast_task_zone_body_exited"]
 [connection signal="body_entered" from="BreakfastState/BreakfastEatZone" to="." method="_on_breakfast_eat_zone_body_entered"]
 [connection signal="body_exited" from="BreakfastState/BreakfastEatZone" to="." method="_on_breakfast_eat_zone_body_exited"]
+[connection signal="body_entered" from="WaterPlant/WaterPlantTaskZone" to="." method="_on_water_plant_task_zone_body_entered"]
+[connection signal="body_exited" from="WaterPlant/WaterPlantTaskZone" to="." method="_on_water_plant_task_zone_body_exited"]
+[connection signal="body_entered" from="WaterPlant/WateringCanPickupZone" to="." method="_on_watering_can_pickup_zone_body_entered"]
+[connection signal="body_exited" from="WaterPlant/WateringCanPickupZone" to="." method="_on_watering_can_pickup_zone_body_exited"]
+[connection signal="body_entered" from="WaterPlant/WaterPlantZone" to="." method="_on_water_plant_zone_body_entered"]
+[connection signal="body_exited" from="WaterPlant/WaterPlantZone" to="." method="_on_water_plant_zone_body_exited"]

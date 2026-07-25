@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bh3375y6e6h4s"]
+
+[ext_resource type="Texture2D" uid="uid://dqpjaqais2u4r" path="res://assets/textures/pot/POT_TERRACOTTA_SMALL_Base_Color.jpg" id="1_i1ysm"]
+[ext_resource type="Texture2D" uid="uid://dmame8ki3gytw" path="res://assets/textures/pot/POT_TERRACOTTA_SMALL_Normal_OpenGL.jpg" id="2_gti0d"]
+[ext_resource type="Texture2D" uid="uid://bapv1kwtg6q8v" path="res://assets/textures/pot/POT_TERRACOTTA_SMALL_Roughness.jpg" id="3_1j5gi"]
+
+[resource]
+albedo_texture = ExtResource("1_i1ysm")
+roughness_texture = ExtResource("3_1j5gi")
+normal_enabled = true
+normal_texture = ExtResource("2_gti0d")

@@ -61,6 +61,11 @@ _subresources={
 "use_external/fallback_path": "res://assets/materials/counter_wood.tres",
 "use_external/path": "uid://bj66ac7oewsus"
 },
+"FakeSky": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://assets/materials/fake_sky.tres",
+"use_external/path": "uid://bwf0rgnubo3qe"
+},
 "Fridge": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://assets/materials/fridge.tres",

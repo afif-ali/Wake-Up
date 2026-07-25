@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bwf0rgnubo3qe"]
+
+[ext_resource type="Texture2D" uid="uid://cwu78jcyawn4n" path="res://assets/textures/fake_sky/fake_sky.png" id="1_7derj"]
+[ext_resource type="Texture2D" uid="uid://o3j5af7ckmxa" path="res://assets/textures/wallpaper/Wallpaper001A_1K-JPG_Displacement.jpg" id="2_u47gl"]
+[ext_resource type="Material" uid="uid://d38sbpqly276q" path="res://assets/materials/gunk.tres" id="3_64ifg"]
+[ext_resource type="Texture2D" uid="uid://dlnd52u1dxc41" path="res://assets/textures/wallpaper/Wallpaper001A_1K-JPG_NormalGL.jpg" id="4_gr5mh"]
+
+[resource]
+next_pass = ExtResource("3_64ifg")
+albedo_texture = ExtResource("1_7derj")
+normal_texture = ExtResource("4_gr5mh")
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("2_u47gl")
