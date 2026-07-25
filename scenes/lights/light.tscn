@@ -9,7 +9,6 @@ emission = Color(1, 1, 1, 1)
 
 [node name="light" unique_id=546139774 instance=ExtResource("1_mx82u")]
 script = ExtResource("2_rhy3g")
-lit = null
 
 [node name="Light" parent="." index="0" unique_id=1859821035]
 surface_material_override/1 = SubResource("StandardMaterial3D_rhy3g")
@@ -19,4 +18,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12310858, 0)
 light_energy = 0.5
 light_indirect_energy = 0.5
 shadow_enabled = true
-omni_range = 10.0
+omni_range = 20.0

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d0b1bjoiy6ms7"]
+
+[ext_resource type="Texture2D" uid="uid://c3be7o2wptxcn" path="res://assets/textures/toast/Toasts_baseColor.jpeg" id="1_kgjnw"]
+[ext_resource type="Texture2D" uid="uid://te0mbwt8k7wp" path="res://assets/textures/toast/Toasts_normal.png" id="2_6js6q"]
+[ext_resource type="Texture2D" uid="uid://c7qbrjaoows2r" path="res://assets/textures/toast/Toasts_metallicRoughness.png" id="3_80yfc"]
+
+[resource]
+albedo_texture = ExtResource("1_kgjnw")
+roughness_texture = ExtResource("3_80yfc")
+normal_enabled = true
+normal_texture = ExtResource("2_6js6q")

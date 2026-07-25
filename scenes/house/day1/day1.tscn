@@ -5,10 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://ck78012a65lst" path="res://assets/models/house.blend" id="3_2uplj"]
 [ext_resource type="PackedScene" uid="uid://c53jxljflkx5u" path="res://scenes/door/door.tscn" id="4_7wlbh"]
 [ext_resource type="PackedScene" uid="uid://b7qieox5ybfyf" path="res://scenes/lights/light.tscn" id="5_rene2"]
+[ext_resource type="PackedScene" uid="uid://6b403u3lodl7" path="res://assets/models/breakfast.blend" id="6_7wlbh"]
 [ext_resource type="PackedScene" uid="uid://occxuf7jd7bc" path="res://assets/models/bed.blend" id="6_eubtq"]
 [ext_resource type="PackedScene" uid="uid://dy6agawhbxsv" path="res://assets/models/desk.blend" id="7_48647"]
 [ext_resource type="PackedScene" uid="uid://bayvs65mc7p6a" path="res://scenes/player/player.tscn" id="8_5o6qy"]
-[ext_resource type="PackedScene" uid="uid://cq3t6fk7k7qg5" path="res://scenes/dialogue/dialogue.tscn" id="9_2uplj"]
+[ext_resource type="PackedScene" uid="uid://cq3t6fk7k7qg5" path="res://scenes/ui/UI.tscn" id="9_2uplj"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_oeocw"]
 material = ExtResource("2_5o6qy")
@@ -225,7 +226,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t8t15"]
-size = Vector3(2, 3.8120117, 3)
+size = Vector3(1.3129883, 3.8120117, 5)
 
 [sub_resource type="Animation" id="Animation_2uplj"]
 length = 0.001
@@ -402,6 +403,13 @@ _data = {
 &"showering": SubResource("Animation_7wlbh")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dg7xi"]
+size = Vector3(4, 4, 2)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_dg7xi"]
+height = 3.0
+radius = 1.0
+
 [node name="Day1" type="Node3D" unique_id=1806837822]
 script = ExtResource("1_kxtp2")
 
@@ -424,56 +432,56 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4.5, 15.8)
 [node name="Desk" parent="Props" unique_id=1984837906 instance=ExtResource("7_48647")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 4, 23)
 
+[node name="Breakfast" parent="Props" unique_id=1772270017 instance=ExtResource("6_7wlbh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8, 1.1717921, -0.20098191)
+
 [node name="Doors" type="Node3D" parent="." unique_id=1934365505]
 
-[node name="BedroomDoor" parent="Doors" unique_id=1786826446 instance=ExtResource("4_7wlbh")]
+[node name="BedroomDoor" parent="Doors" unique_id=1786826446 node_paths=PackedStringArray("UI") instance=ExtResource("4_7wlbh")]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -13.5, 4.5, 21)
+UI = NodePath("../../UI")
 
-[node name="GarageDoor" parent="Doors" unique_id=382344102 instance=ExtResource("4_7wlbh")]
+[node name="GarageDoor" parent="Doors" unique_id=382344102 node_paths=PackedStringArray("UI") instance=ExtResource("4_7wlbh")]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -20.5, 0, 21)
+UI = NodePath("../../UI")
 
-[node name="BathroomDoor" parent="Doors" unique_id=1385803568 instance=ExtResource("4_7wlbh")]
+[node name="BathroomDoor" parent="Doors" unique_id=1385803568 node_paths=PackedStringArray("UI") instance=ExtResource("4_7wlbh")]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -13.5, 4.5, 10)
 opened = true
+UI = NodePath("../../UI")
 
-[node name="GarageHallwayDoor" parent="Doors" unique_id=1444963848 instance=ExtResource("4_7wlbh")]
+[node name="GarageHallwayDoor" parent="Doors" unique_id=1444963848 node_paths=PackedStringArray("UI") instance=ExtResource("4_7wlbh")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, 0, 18)
+UI = NodePath("../../UI")
 
 [node name="Lights" type="Node3D" parent="." unique_id=1655193130]
 
 [node name="BedroomLight" parent="Lights" unique_id=546139774 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8.5, 18.5)
-lit = true
 color = Color(0.99999994, 0.8767258, 0.7994711, 1)
 
 [node name="BathroomLight" parent="Lights" unique_id=686252536 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8.5, 9.5)
-lit = true
 color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="HallwayLight1" parent="Lights" unique_id=1671989779 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.75, 8.5, 19.5)
-lit = true
 color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="HallwayLight2" parent="Lights" unique_id=1866442648 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.75, 8.5, 2.5)
-lit = true
 color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="HallwayLight3" parent="Lights" unique_id=1464777196 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 8.5, 2.5)
-lit = true
 color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="GarageLight" parent="Lights" unique_id=92500170 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, 4, 19.5)
-lit = true
 color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="KitchenLight" parent="Lights" unique_id=1548822467 instance=ExtResource("5_rene2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 4, 2.5)
-lit = true
 color = Color(1, 0.8784314, 0.8, 1)
 
 [node name="StartCutscene" type="Node" parent="." unique_id=523004490]
@@ -487,22 +495,40 @@ libraries/ = SubResource("AnimationLibrary_2uplj")
 [node name="ShowerState" type="Node" parent="." unique_id=2035455960]
 
 [node name="Camera3D" type="Camera3D" parent="ShowerState" unique_id=973746157]
-transform = Transform3D(1, 0, 0, 0, 0.98480767, -0.17364816, 0, 0.17364816, 0.98480767, -4.5, 6.2, 10)
+transform = Transform3D(1, 0, 0, 0, 0.98480725, -0.17364809, 0, 0.17364809, 0.98480725, -4.5, 6.2, 10)
 
 [node name="ShowerStateTrigger" type="Area3D" parent="ShowerState" unique_id=1930893713]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4.5, 12)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ShowerState/ShowerStateTrigger" unique_id=1982729855]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.0310059, -0.5303955)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15649414, 2.0310059, -1.5303955)
 shape = SubResource("BoxShape3D_t8t15")
 
 [node name="ShowerStateAnim" type="AnimationPlayer" parent="ShowerState" unique_id=230348703]
 libraries/ = SubResource("AnimationLibrary_rene2")
 
+[node name="BreakfastState" type="Node" parent="." unique_id=1069868861]
+
+[node name="BreakfastTaskZone" type="Area3D" parent="BreakfastState" unique_id=841986790]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreakfastState/BreakfastTaskZone" unique_id=14728995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 6.5, 6.5)
+shape = SubResource("BoxShape3D_dg7xi")
+
+[node name="BreakfastEatZone" type="Area3D" parent="BreakfastState" unique_id=692488066]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreakfastState/BreakfastEatZone" unique_id=783164496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.5, 0)
+shape = SubResource("CylinderShape3D_dg7xi")
+
 [node name="Player" parent="." unique_id=1093817366 instance=ExtResource("8_5o6qy")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7, 4.5, 12)
 
-[node name="Dialogue" parent="." unique_id=1341159570 instance=ExtResource("9_2uplj")]
+[node name="UI" parent="." unique_id=1341159570 instance=ExtResource("9_2uplj")]
 
 [connection signal="body_entered" from="ShowerState/ShowerStateTrigger" to="." method="_on_shower_state_trigger_body_entered"]
 [connection signal="body_exited" from="ShowerState/ShowerStateTrigger" to="." method="_on_shower_state_trigger_body_exited"]
+[connection signal="body_entered" from="BreakfastState/BreakfastTaskZone" to="." method="_on_breakfast_task_zone_body_entered"]
+[connection signal="body_exited" from="BreakfastState/BreakfastTaskZone" to="." method="_on_breakfast_task_zone_body_exited"]
+[connection signal="body_entered" from="BreakfastState/BreakfastEatZone" to="." method="_on_breakfast_eat_zone_body_entered"]
+[connection signal="body_exited" from="BreakfastState/BreakfastEatZone" to="." method="_on_breakfast_eat_zone_body_exited"]

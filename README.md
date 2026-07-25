@@ -7,3 +7,7 @@
 "Old Kitchen Cabinets" (https://skfb.ly/onGMR) by Coozy is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 "Old Fridge" (https://skfb.ly/oYEKo) by dylanheyes is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"Coffee Mug (School Project)" (https://skfb.ly/6toBy) by Ole Gunnar Isager is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
+"Toasts" (https://skfb.ly/onZKp) by AK STUDIO is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).

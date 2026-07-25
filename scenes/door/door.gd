@@ -2,6 +2,7 @@ extends Node3D
 
 
 @export var opened:bool = false
+@export var UI:Control
 @onready var door: MeshInstance3D = $Door
 
 const SPEED:int = 5
@@ -21,7 +22,9 @@ func _process(delta: float) -> void:
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		reaching = true
+		UI.tooltip("Press [ E ] to interact.")
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.name == "Player":
 		reaching = false
+		UI.clear_tooltip()
